@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: "FuenteRegular", 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --colorPrincipal: #09659F;
+  
+  --colorPrincipalDarken: #246692;
+  --colorMorado: #4F4898;
+  --colorAzul: #3498db;
+  --colorVerde: #6B8D40;
+  --colorNegro: #1D1D1B;
+  --colorGris: #525250;
+  --colorBlanco: #fff;
+  --colorRojoError: #D32F2F;
+  --color: #ffffff;
+
+
+  --SizeSmallLess: 0.75rem; /* 12px */
+  --SizeSmall: 0.875rem; /* 14px */
+  --SizeNormal: 1rem; /* 16px */
+  --SizeLarge: 1.25rem; /* 20px */
+  --SizeTituloLess: 1.75rem; /* 28px */
+  --SizeTitulo: 2rem; /* 32px */
+
+  --HeightMenu: 80px; 
+
+  --WidthLeftMenu: 160px; 
+
+  --StandardWidthContainer: 1200px; 
+
+
+  --FuenteRegular: 'FuenteRegular', sans-serif;
+  --FuenteBold: 'FuenteBold', sans-serif;
+
+
+}
+
+@font-face {
+  font-family: 'FuenteRegular';
+  src: url('/src/Media/Fonts/AvenirNextLTPro-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuenteBold';
+  src: url('/src/Media/Fonts/AvenirNextLTPro-Bold.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-size: var(--SizeNormal);
+  color: var(--ColorNegro);
+}
+
+h1 {
+  font-size: var(--SizeTitulo);
+  color: var(--ColorPrincipal);
+}
+
+p {
+  font-size: var(--SizeNormal);
+  color: var(--ColorGris);
+}
+
+
+@media (max-width: 1024px) { 
+  body {
+    font-size: var(--SizeSmall); 
+  }
+
+  h1 {
+    font-size: var(--SizeTituloLess); 
+  }
+
+  p {
+    font-size: var(--SizeSmall);
+  }
+}
+
+@media (max-width: 768px) { 
+  body {
+    font-size: var(--SizeSmallLess); 
+  }
+
+  h1 {
+    font-size: var(--SizeNormal); 
+  }
+
+  p {
+    font-size: var(--SizeSmallLess); 
+  }
+}
