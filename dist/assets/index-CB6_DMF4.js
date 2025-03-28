@@ -339,7 +339,7 @@ License: MIT
     flex-direction: column;
     justify-content: start;
     gap: 10px;
-`,G1=({txt:u="Categoria",setHerramientasFiltradasPorCategoria:r,categoria:f,todasLasHerramientas:c,categoriaSeleccionada:o,setCategoriaSeleccionada:m})=>{const b=()=>{f&&(o===f?(r(c),m("s"),console.log(c)):(r(c.filter(x=>{var y;return((y=x.isHerramienta)==null?void 0:y.categoria)===f})),m(f)))};return P.jsx(q1,{onClick:()=>b(),activo:o===f?!0:void 0,children:u})},X1=({setHerramientasFiltradasPorCategoria:u,todasLasHerramientas:r})=>{const[f,c]=U.useState(),o=[{txt:"Odoo",categoria:"odoo"},{txt:"Reportería",categoria:"reporteria"}];return P.jsx(Y1,{children:o.map((m,b)=>P.jsx(G1,{txt:m.txt,categoria:m.categoria,setHerramientasFiltradasPorCategoria:u,todasLasHerramientas:r,setCategoriaSeleccionada:c,categoriaSeleccionada:f},b))})},Q1=_t.div`
+`,G1=({txt:u="Categoria",setHerramientasFiltradasPorCategoria:r,categoria:f,todasLasHerramientas:c,categoriaSeleccionada:o,setCategoriaSeleccionada:m})=>{const b=()=>{f&&(o===f?(r(c),m("s"),console.log(c)):(r(c.filter(x=>{var y;return((y=x.isHerramienta)==null?void 0:y.categoria)===f})),m(f)))};return P.jsx(q1,{onClick:()=>b(),active:o===f,children:u})},X1=({setHerramientasFiltradasPorCategoria:u,todasLasHerramientas:r})=>{const[f,c]=U.useState(),o=[{txt:"Odoo",categoria:"odoo"},{txt:"Reportería",categoria:"reporteria"}];return P.jsx(Y1,{children:o.map((m,b)=>P.jsx(G1,{txt:m.txt,categoria:m.categoria,setHerramientasFiltradasPorCategoria:u,todasLasHerramientas:r,setCategoriaSeleccionada:c,categoriaSeleccionada:f},b))})},Q1=_t.div`
     width: 100%;
     max-width: 600px;
     padding: 25px 10px 10px;

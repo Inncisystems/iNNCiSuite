@@ -47,7 +47,7 @@ export const BtnCategoria = ({ txt = "Categoria", setHerramientasFiltradasPorCat
         }
     }
     return (
-        <ContenedorBtn onClick={() => handleClickCategoria()} activo={categoriaSeleccionada === categoria ? true : undefined} >
+        <ContenedorBtn onClick={() => handleClickCategoria()} active={categoriaSeleccionada === categoria} >
             {txt}
         </ContenedorBtn>
     )
