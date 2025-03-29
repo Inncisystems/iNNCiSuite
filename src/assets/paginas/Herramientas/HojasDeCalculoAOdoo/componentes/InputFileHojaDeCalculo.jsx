@@ -49,6 +49,7 @@ const FileItem = styled.li`
 
 const ContenedorInputField = styled.div`
   width: 400px;
+  max-width: 100%;
   height: auto;
   display: grid;
   grid-template-rows: 200px 150px;
@@ -65,10 +66,15 @@ const DeleteButton = styled.button`
   color: white;
   border: none;
   border-radius: 50%;
+
   cursor: pointer;
-  padding: 5px 10px;
+ 
   font-size: 12px;
-  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover {
     background-color: darkred;
   }
@@ -83,20 +89,20 @@ export const InputFile = ({ onFilesSelected, files, setFiles }) => {
       setFiles(validFiles);
       if (onFilesSelected) {
         onFilesSelected(validFiles);
-    
+
       }
     }
   };
 
   const handleChange = (e) => {
     handleFiles(e.target.files);
-    
+
   };
 
   const handleDrop = (e) => {
     e.preventDefault();
     handleFiles(e.dataTransfer.files);
-    
+
   };
 
   const handleDelete = (index) => {

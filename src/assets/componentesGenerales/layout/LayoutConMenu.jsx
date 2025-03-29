@@ -26,16 +26,27 @@ const TopMenuStyled = styled.div`
   h1{
     color: var(--colorPrincipal);
   }
+  @media (max-width: 420px) {
+    height: 60px;
+  }
 
 `;
 const ContenedorImg = styled.div`
   height: 90%;
+  max-width: 30%;
+  max-height: 90%;
   width: auto;
-  object-fit: contain;
   position: absolute;
   left: 10px;
   cursor: pointer;
+  img{
 
+    object-fit: contain;
+  }
+  @media (max-width: 420px) {
+    max-width: 25%;
+    height: auto;
+  }
 `
 const TopMenu = () => {
   const imageSources = [ { src: imgFondo, media: "(max-width: 600px)" }];
@@ -60,6 +71,11 @@ const ContentContainer = styled.div`
   width: 100%;
   overflow: auto;
   background-color: var(--colorPrincipal);
+  display: flex;
+  justify-content: center;
+  @media (max-width: 420px) {
+    margin-top: 60px;
+  }
 `;
 
 export const LayoutConMenu = ({ children }) => {

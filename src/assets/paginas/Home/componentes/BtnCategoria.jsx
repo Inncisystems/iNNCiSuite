@@ -16,7 +16,7 @@ const ContenedorBtn = styled.button`
     font-size: 18px;
     font-weight: bold;
     
-
+    
     
     background-color: ${(props) => (props.active ? "var(--colorVerde)" : "var(--colorPrincipal)")};
     transform: ${(props) => (props.active ? "scale(0.95)" : "scale(1)")};
@@ -24,11 +24,24 @@ const ContenedorBtn = styled.button`
         transform: ${(props) => (props.active ? "scale(0.95)" : "scale(0.97)")};
         transition: .2s ease transform;
     }
+    
+    @media (max-width: 600px) {
+        height: 100%;
+        width: auto;
+        min-width: 100px;
+        padding: 0px 15px;
+        font-size: 14px;
+    }
 `
 const ContenedorBtnCategoria = styled(ContenedorGenerico)`
     flex-direction: column;
     justify-content: start;
     gap: 10px;
+    @media (max-width: 600px) {
+        
+        flex-direction: row;
+        overflow-x: auto;
+    }
 `
 export const BtnCategoria = ({ txt = "Categoria", setHerramientasFiltradasPorCategoria, categoria, todasLasHerramientas, categoriaSeleccionada, setCategoriaSeleccionada }) => {
     const handleClickCategoria = () => {

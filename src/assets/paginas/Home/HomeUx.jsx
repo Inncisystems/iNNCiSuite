@@ -12,6 +12,13 @@ const ContenedorHomeUx = styled(ContenedorGenerico)`
     grid-template-columns: 250px 1fr;
     height: 100%;
     width: 100%;
+    
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr;
+    }
+        
 `
 
 const ContenedorMenuLateral = styled.div`
@@ -21,6 +28,18 @@ const ContenedorMenuLateral = styled.div`
     height: 100%;
     width: 100%;
     padding:  20px 8px;
+    @media (max-width: 600px) {
+        
+        grid-template-rows: 36px auto;
+        padding:  5px ;
+        overflow: hidden;
+        gap: 10px;
+
+        h1{
+            margin: 0;
+            font-size: 24px;
+        }
+    }
 `
 
 
@@ -53,8 +72,6 @@ export const HomeUx = () => {
 
             <ContenedorDerecho>
                 <BuscadorHerramienta setHerramientasFiltradas={setHerramientasFiltradasPorTexto} todasLasHerramientas={herramientasFiltradasPorCategoria}/>       
-
-              
                 <Herramientas herramientas={herramientasFiltradasPorTexto} />       
             </ContenedorDerecho>
         </ContenedorHomeUx>

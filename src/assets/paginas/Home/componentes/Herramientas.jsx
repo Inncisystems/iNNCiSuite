@@ -26,6 +26,10 @@ const ContenedorHerramienta = styled.div`
         transform: scale(.95);
         transition: transform .2s ease;
     }
+    @media (max-width: 600px) {
+        width: 45%;
+        grid-template-rows: 125px auto;
+    }
     
 `
 const ContenedorTop = styled.div`
@@ -41,8 +45,15 @@ const ContenedorBottom = styled.div`
     width: 100%;
     height: 100%;
     display: grid; 
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr auto;
     padding: 5px;
+    gap: 5px;
+
+`
+const TxtDescripcion = styled(TxtGenerico)`
+    @media (max-width: 320px) {
+      display: none;
+    }
 `
 const Herramienta = ({ src = imgInnci, alt = "Imagen", titulo = "Titulo", descripcion="Descripcion de la app", to="/" }) => {
     const Navigate = useNavigate();
@@ -56,7 +67,7 @@ const Herramienta = ({ src = imgInnci, alt = "Imagen", titulo = "Titulo", descri
             </ContenedorTop>
             <ContenedorBottom>
                 <TxtGenerico color="white">{titulo}</TxtGenerico>
-                <TxtGenerico color="white" size="14px">{descripcion}</TxtGenerico>
+                <TxtDescripcion color="white" size="14px">{descripcion}</TxtDescripcion>
             </ContenedorBottom>
 
         </ContenedorHerramienta>
